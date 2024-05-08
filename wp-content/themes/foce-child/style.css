@@ -1,3 +1,20 @@
+.sectionAnimation {
+  opacity: 0;
+  transition: opacity 800ms ease-in;
+}
+
+.sectionAnimation--fadeIn {
+  opacity: 1;
+}
+
+/*@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}*/
 .site-footer {
   display: flex;
   flex-direction: column;
@@ -30,6 +47,29 @@
 .site-footer::after {
   bottom: 35em;
   right: 2em;
+}
+
+.story__article::after,
+.story h2::after,
+.studio h2::after,
+.site-footer::after {
+  animation: fleursQuiTournent 20s linear both infinite;
+  transform-origin: center;
+}
+
+.studio h2::before,
+.site-footer::before {
+  animation: fleursQuiTournent 20s linear both infinite;
+  transform-origin: center;
+}
+
+@keyframes fleursQuiTournent {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

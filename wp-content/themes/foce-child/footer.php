@@ -11,7 +11,7 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer sectionAnimation">
 
     <?php get_template_part( 'parts/nomination' ); ?>
         
