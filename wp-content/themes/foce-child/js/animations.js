@@ -8,10 +8,10 @@ const observer = new IntersectionObserver(entries => {
         return;
       }
   
-      entry.target.classList.remove('sectionAnimation--fadeIn');
+      //entry.target.classList.remove('sectionAnimation--fadeIn');
     });
   }, {
-    threshold: [0.5]
+    threshold: [0.10]
 });
   
   // Get multiple elements instead of a single one using "querySelectorAll"

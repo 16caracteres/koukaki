@@ -1,20 +1,19 @@
 .sectionAnimation {
   opacity: 0;
-  transition: opacity 800ms ease-in;
 }
 
 .sectionAnimation--fadeIn {
-  opacity: 1;
+  animation: sectionFadeIn 800ms ease-in forwards;
 }
 
-/*@keyframes sectionFadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}*/
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .site-footer {
   display: flex;
   flex-direction: column;

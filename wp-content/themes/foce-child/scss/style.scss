@@ -1,24 +1,22 @@
 // Ajout Fade-in au scroll
 .sectionAnimation {
     opacity: 0;
-    transition: opacity 800ms ease-in;
 }
 
 .sectionAnimation {
     &--fadeIn {
-        //animation: sectionFadeIn 800ms ease-in forwards;
-        opacity: 1;
+        animation: sectionFadeIn 800ms ease-in forwards;
     }
 }
 
-/*@keyframes sectionFadeIn {
+@keyframes sectionFadeIn {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
     }
-}*/
+}
 
 // Ajout Section Nomination aux Oscars
 

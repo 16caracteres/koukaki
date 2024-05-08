@@ -22,7 +22,7 @@ get_header();
             );
             $characters_query = new WP_Query($args);
             ?>
-            <article id="characters">
+            <article id="characters" class="sectionAnimation">
                 <div class="main-character">
                     <h3>Les personnages</h3>
                     <?php
@@ -48,7 +48,7 @@ get_header();
                     ?>
                 </div>
             </article>
-            <article id="place">
+            <article id="place" class="sectionAnimation">
                 <div>
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
@@ -58,7 +58,7 @@ get_header();
         </section>
 
 
-        <section id="studio" class="studio sectionAnimationn">
+        <section id="studio" class="studio sectionAnimation">
             <h2>Studio Koukaki</h2>
             <div>
                 <p>Acteur majeur de l’animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>
