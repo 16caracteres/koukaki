@@ -1,4 +1,4 @@
-// Ajout Fade-in au scroll
+// Ajout Fade-in des sections au scroll
 .sectionAnimation {
     opacity: 0;
 }
@@ -18,6 +18,37 @@
     }
 }
 
+// Ajout animation des titres de sections
+.titreAnimation {
+    display: inline-block;
+    transform: translateY(80px);
+    opacity: 0;
+}
+
+.titreAnimation {
+    &--scroll {
+        animation: titreScroll 800ms ease-in forwards;
+    }
+    &:nth-child(2) {
+        animation-delay: 300ms;
+    }
+}
+
+@keyframes titreScroll {
+    from {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#titreStudio {
+    overflow: inherit !important;
+}
+
 // Ajout Section Nomination aux Oscars
 
 .site-footer {
@@ -27,10 +58,14 @@
     padding-top: 8em;
     #nomination {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
-        width: 1010px;
+        width: 1041px;
         padding-bottom: 20em;
+        @media (max-width:996px) {
+            width:auto;
+        }
         h3 {
             width: 762px;
             height: 283px;
@@ -41,6 +76,14 @@
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             background-image: url("assets/orange_cloud.png");
             background-size: contain;
+            @media (max-width:996px) {
+                width:auto;
+                height: auto;
+                font-size : 1.25rem;
+                line-height: 1.25rem;
+                background-size: cover;
+                padding: 55px;
+            }
         }
         .nomination__logo {
             width: 279px;
