@@ -4,8 +4,14 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-        <section class="banner sectionAnimation">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+        <section class="banner sectionAnimation" data-0="transform:translateY(0px)" data-300="transform:translateY(-50px)">
+            <video id="bannerVideo" autoplay loop muted>
+                <source src="<?php echo get_stylesheet_directory_uri() . '/assets/Studio+Koukaki-vidéo+header+sans+son+(1).mp4'; ?> " type="video/mp4">
+            </video>
+            <div class="logoContainer" data-0="transform:translateY(0px)" data-400="transform:translateY(150px)">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            </div>
+            
         </section>
         <section id="#story" class="story sectionAnimation">
             <h2><span class="titreAnimation">L'histoire</span></h2>

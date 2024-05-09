@@ -5,6 +5,9 @@ function theme_enqueue_styles() {
     wp_enqueue_script( 'animations', get_stylesheet_directory_uri() . '/js/animations.js',  array(), _S_VERSION, array( 
         'strategy'  => 'defer',
     )  );
+    wp_enqueue_script( 'skrollr-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js');
+    wp_enqueue_script( 'skrollr', get_stylesheet_directory_uri() . '/js/skrollr.js', array(), '1.0.0', true);
+
 }
 
 // Get customizer options form parent theme

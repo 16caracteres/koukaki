@@ -127,3 +127,35 @@
         transform: rotate(360deg);
     }
 }
+
+// Ajout vidéo banner + animation de flottaison
+.banner {
+    position: relative;
+    .bannerVideo {
+        @media (max-width:996px) {
+            display: none;
+        }
+    }
+    .logoContainer {
+        position: absolute;
+        max-width: 100%;
+        img {
+            //position: absolute;
+            width: auto;
+            animation : flottement 1.5s ease-in-out infinite;
+        }
+    }
+    
+}
+
+@keyframes flottement {
+    0% {
+        transform: translate(0);
+    }
+    55% {
+        transform: translate(1px, 4px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}

@@ -113,5 +113,33 @@
     transform: rotate(360deg);
   }
 }
+.banner {
+  position: relative;
+}
+@media (max-width: 996px) {
+  .banner .bannerVideo {
+    display: none;
+  }
+}
+.banner .logoContainer {
+  position: absolute;
+  max-width: 100%;
+}
+.banner .logoContainer img {
+  width: auto;
+  animation: flottement 1.5s ease-in-out infinite;
+}
+
+@keyframes flottement {
+  0% {
+    transform: translate(0);
+  }
+  55% {
+    transform: translate(1px, 4px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
