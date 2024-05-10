@@ -5,8 +5,19 @@ function theme_enqueue_styles() {
     wp_enqueue_script( 'animations', get_stylesheet_directory_uri() . '/js/animations.js',  array(), _S_VERSION, array( 
         'strategy'  => 'defer',
     )  );
+
+    //Ajout script skrollr
     wp_enqueue_script( 'skrollr-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js');
     wp_enqueue_script( 'skrollr', get_stylesheet_directory_uri() . '/js/skrollr.js', array(), '1.0.0', true);
+
+    //Ajout script et style swiperjs
+    wp_enqueue_style( 'swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' );
+    wp_enqueue_script( 'swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), _S_VERSION, array( 
+        'strategy'  => 'defer',
+    )  );
+    wp_enqueue_script( 'swiper', get_stylesheet_directory_uri() . '/js/swiper.js', array(), _S_VERSION, array( 
+        'strategy'  => 'defer',
+    )  );
 
 }
 

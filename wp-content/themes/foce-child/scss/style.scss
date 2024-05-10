@@ -131,7 +131,7 @@
 // Ajout vidéo banner + animation de flottaison
 .banner {
     position: relative;
-    .bannerVideo {
+    #bannerVideo {
         @media (max-width:996px) {
             display: none;
         }
@@ -142,10 +142,9 @@
         img {
             //position: absolute;
             width: auto;
-            animation : flottement 1.5s ease-in-out infinite;
+            animation : flottement 1.5s ease-in-out infinite;     
         }
     }
-    
 }
 
 @keyframes flottement {
@@ -159,3 +158,51 @@
         transform: translate(0);
     }
 }
+
+
+// Annuler les animations pour l'accessibilité
+@media (prefers-reduced-motion: reduce) {
+    .banner .logoContainer img,
+    .studio h2::before,
+    .site-footer::before,
+    .story__article::after,
+    .story h2::after,
+    .studio h2::after,
+    .site-footer::after,
+    .titreAnimation--scroll,
+    .sectionAnimation--fadeIn {
+      animation: none;
+    }
+  }
+
+
+
+// Modification de la section des personnages
+.story {
+    #characters {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .titreCharacters {
+            text-align: left;
+            background-position: left;
+            margin-left: 2em;
+            padding: 1em;
+        }
+        .containerCharacters {
+            max-width: 1440px;
+            .picturesCharacters {
+                display: flex;
+                flex-direction: row;
+                flex-wrap:nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                .catPicture {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+  

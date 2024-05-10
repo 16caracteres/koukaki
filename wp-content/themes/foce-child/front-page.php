@@ -9,6 +9,7 @@ get_header();
                 <source src="<?php echo get_stylesheet_directory_uri() . '/assets/Studio+Koukaki-vidéo+header+sans+son+(1).mp4'; ?> " type="video/mp4">
             </video>
             <div class="logoContainer" data-0="transform:translateY(0px)" data-400="transform:translateY(150px)">
+                <button id="btnVideo" onclick="playAndPause()">Pause II</button>
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             </div>
             
@@ -18,42 +19,9 @@ get_header();
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
-            <?php
-            $args = array(
-                'post_type' => 'characters',
-                'posts_per_page' => -1,
-                'meta_key'  => '_main_char_field',
-                'orderby'   => 'meta_value_num',
-
-            );
-            $characters_query = new WP_Query($args);
-            ?>
-            <article id="characters" class="sectionAnimation">
-                <div class="main-character">
-                    <h3><span class="titreAnimation">Les personnages</span></h3>
-                    <?php
-                    $main_character = $characters_query->posts[0];
-                    echo '<figure>';
-                    echo get_the_post_thumbnail( $main_character->ID, 'full' );
-                    echo '<figcaption>'. $main_character->post_title . '</figcaption>';
-                    echo '</figure>';
-                    $characters_query->next_post();
-                    ?>
-                </div>
-                <div class="other-characters">
-                    <?php
-                    while ( $characters_query->have_posts() ) {
-                        $characters_query->the_post();
-                        echo '<figure>';
-                        echo get_the_post_thumbnail( get_the_ID(), 'full' );
-                        echo '<figcaption>';
-                        the_title();
-                        echo'</figcaption>';
-                        echo '</figure>';
-                    }
-                    ?>
-                </div>
-            </article>
+            
+            <?php get_template_part( 'parts/personnages' ); ?>
+            
             <article id="place" class="sectionAnimation">
                 <div>
                     <h3><span class="titreAnimation">Le Lieu</span></h3>
