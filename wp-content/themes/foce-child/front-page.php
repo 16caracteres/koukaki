@@ -19,10 +19,16 @@ get_header();
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
-            
+
             <?php get_template_part( 'parts/personnages' ); ?>
             
             <article id="place" class="sectionAnimation">
+                <div class="clouds cloud__big">
+                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/big_cloud.png'; ?>" data-1350="transform:translateX(0px)" data-2000="transform:translateX(-300px)">
+                </div>
+                <div class="clouds cloud__little">
+                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/little_cloud.png'; ?>" data-1350="transform:translateX(0px)" data-2000="transform:translateX(-300px)">
+                </div>
                 <div>
                     <h3><span class="titreAnimation">Le Lieu</span></h3>
                     <p><?php echo get_theme_mod('place'); ?></p>

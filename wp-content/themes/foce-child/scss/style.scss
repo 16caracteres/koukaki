@@ -1,4 +1,6 @@
-// Ajout Fade-in des sections au scroll
+@import "layouts/front-page.scss";
+
+// Ajout Fade-in des sections au scroll ///////////////////////////
 .sectionAnimation {
     opacity: 0;
 }
@@ -18,7 +20,7 @@
     }
 }
 
-// Ajout animation des titres de sections
+// Ajout animation des titres de sections ///////////////////////////
 .titreAnimation {
     display: inline-block;
     transform: translateY(80px);
@@ -49,8 +51,7 @@
     overflow: inherit !important;
 }
 
-// Ajout Section Nomination aux Oscars
-
+// Ajout Section Nomination aux Oscars ///////////////////////////
 .site-footer {
     display: flex;
     flex-direction: column;
@@ -97,7 +98,7 @@
     }
 }
 
-// Animations florales
+// Animations florales ///////////////////////////
 @mixin animationFleurs {
     animation: fleursQuiTournent 20s linear both infinite;
     transform-origin: center;
@@ -128,7 +129,7 @@
     }
 }
 
-// Ajout vidéo banner + animation de flottaison
+// Ajout vidéo banner + animation de flottaison ///////////////////////////
 .banner {
     position: relative;
     #bannerVideo {
@@ -159,25 +160,7 @@
     }
 }
 
-
-// Annuler les animations pour l'accessibilité
-@media (prefers-reduced-motion: reduce) {
-    .banner .logoContainer img,
-    .studio h2::before,
-    .site-footer::before,
-    .story__article::after,
-    .story h2::after,
-    .studio h2::after,
-    .site-footer::after,
-    .titreAnimation--scroll,
-    .sectionAnimation--fadeIn {
-      animation: none;
-    }
-  }
-
-
-
-// Modification de la section des personnages
+// Modification de la section des personnages ///////////////////////////
 .story {
     #characters {
         width: 100%;
@@ -205,4 +188,36 @@
         }
     }
 }
-  
+
+//Animation parallaxe des nuages
+#place {
+    position: relative;
+    .clouds {
+        margin:0;
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        filter: blur(15px);
+    }
+    .cloud__little {
+        top:35%;
+        right:35%;
+    }
+}
+
+/*///////////////////////////////////////////////////////////////////////////////*/
+
+// Annuler les animations pour l'accessibilité /////////////////////////// 
+@media (prefers-reduced-motion: reduce) {
+    .banner .logoContainer img,
+    .studio h2::before,
+    .site-footer::before,
+    .story__article::after,
+    .story h2::after,
+    .studio h2::after,
+    .site-footer::after,
+    .titreAnimation--scroll,
+    .sectionAnimation--fadeIn {
+      animation: none;
+    }
+  }

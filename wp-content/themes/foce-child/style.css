@@ -1,3 +1,7 @@
+.story #place {
+  background-image: url("assets/Studio_Koukaki-image_place.png");
+}
+
 .sectionAnimation {
   opacity: 0;
 }
@@ -141,19 +145,6 @@
     transform: translate(0);
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .banner .logoContainer img,
-  .studio h2::before,
-  .site-footer::before,
-  .story__article::after,
-  .story h2::after,
-  .studio h2::after,
-  .site-footer::after,
-  .titreAnimation--scroll,
-  .sectionAnimation--fadeIn {
-    animation: none;
-  }
-}
 .story #characters {
   width: 100%;
   display: flex;
@@ -178,6 +169,36 @@
 }
 .story #characters .containerCharacters .picturesCharacters .catPicture {
   margin: 0;
+}
+
+#place {
+  position: relative;
+}
+#place .clouds {
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  filter: blur(15px);
+}
+#place .cloud__little {
+  top: 35%;
+  right: 35%;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////*/
+@media (prefers-reduced-motion: reduce) {
+  .banner .logoContainer img,
+  .studio h2::before,
+  .site-footer::before,
+  .story__article::after,
+  .story h2::after,
+  .studio h2::after,
+  .site-footer::after,
+  .titreAnimation--scroll,
+  .sectionAnimation--fadeIn {
+    animation: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
