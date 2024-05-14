@@ -1,5 +1,10 @@
 .story {
     #place{
         background-image: url("assets/Studio_Koukaki-image_place.png");
+        .clouds{
+            @media (max-width:1440px) {
+                display: none;
+            }
+        }
     }
 }

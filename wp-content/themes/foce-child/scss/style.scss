@@ -172,6 +172,9 @@
             background-position: left;
             margin-left: 2em;
             padding: 1em;
+            @media (max-width:490px) {
+                margin-left: 0.8em;                
+            }
         }
         .containerCharacters {
             max-width: 1440px;
@@ -204,6 +207,52 @@
         right:35%;
     }
 }
+
+// Ajout de la navigation fullscreen
+#new-navigation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .burger-menu {
+        position: absolute;
+        cursor: pointer;
+        right: 2%;
+    }
+    #burger-navigation {
+        position: fixed;
+        top: 112px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #FFF5E9 ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2% 0;
+        .logo-burger{
+            max-width: 154px;
+        }
+        .burger-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            li {
+                font-size: 4rem;
+                line-height: 12rem;
+                a:hover {
+                    color: #000000;
+                    text-shadow: 0px 0px 14px rgba(255,92,0,0.6);
+                }
+            }
+            
+        }
+    }
+}
+
+
 
 /*///////////////////////////////////////////////////////////////////////////////*/
 

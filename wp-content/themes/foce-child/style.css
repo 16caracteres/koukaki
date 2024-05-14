@@ -1,6 +1,11 @@
 .story #place {
   background-image: url("assets/Studio_Koukaki-image_place.png");
 }
+@media (max-width: 1440px) {
+  .story #place .clouds {
+    display: none;
+  }
+}
 
 .sectionAnimation {
   opacity: 0;
@@ -157,6 +162,11 @@
   margin-left: 2em;
   padding: 1em;
 }
+@media (max-width: 490px) {
+  .story #characters .titreCharacters {
+    margin-left: 0.8em;
+  }
+}
 .story #characters .containerCharacters {
   max-width: 1440px;
 }
@@ -184,6 +194,48 @@
 #place .cloud__little {
   top: 35%;
   right: 35%;
+}
+
+#new-navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#new-navigation .burger-menu {
+  position: absolute;
+  cursor: pointer;
+  right: 2%;
+}
+#new-navigation #burger-navigation {
+  position: fixed;
+  top: 112px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFF5E9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0;
+}
+#new-navigation #burger-navigation .logo-burger {
+  max-width: 154px;
+}
+#new-navigation #burger-navigation .burger-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#new-navigation #burger-navigation .burger-links li {
+  font-size: 4rem;
+  line-height: 12rem;
+}
+#new-navigation #burger-navigation .burger-links li a:hover {
+  color: #000000;
+  text-shadow: 0px 0px 14px rgba(255, 92, 0, 0.6);
 }
 
 /*///////////////////////////////////////////////////////////////////////////////*/

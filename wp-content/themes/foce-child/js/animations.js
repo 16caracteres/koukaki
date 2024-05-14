@@ -1,6 +1,6 @@
 console.log("coucou")
 
-// Fade)in des sections au scroll
+// Fade-in des sections au scroll
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {

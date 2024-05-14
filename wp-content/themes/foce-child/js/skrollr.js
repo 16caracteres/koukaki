@@ -1,3 +1,3 @@
-var s = skrollr.init();
+var s = skrollr.init({forceHeight: false});
 
 console.log("skrollr");

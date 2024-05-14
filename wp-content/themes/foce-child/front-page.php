@@ -9,7 +9,7 @@ get_header();
                 <source src="<?php echo get_stylesheet_directory_uri() . '/assets/Studio+Koukaki-vidéo+header+sans+son+(1).mp4'; ?> " type="video/mp4">
             </video>
             <div class="logoContainer" data-0="transform:translateY(0px)" data-400="transform:translateY(150px)">
-                <button id="btnVideo" onclick="playAndPause()">Pause II</button>
+                <!--<button id="btnVideo" onclick="playAndPause()">Pause II</button>-->
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             </div>
             
