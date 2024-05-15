@@ -197,45 +197,87 @@
 }
 
 #new-navigation {
+  width: 100%;
+}
+#new-navigation .navbar {
+  width: 100%;
   position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#new-navigation .burger-menu {
+#new-navigation .navbar .site-title a:hover {
+  color: #000000;
+}
+#new-navigation .navbar .burger-icons {
   position: absolute;
   cursor: pointer;
-  right: 2%;
+  right: 6%;
+  height: 30px;
+  width: 30px;
+  background-image: url("assets/burger-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#new-navigation .navbar .burger-icons.active {
+  background-image: url("assets/cross-icon.png");
 }
 #new-navigation #burger-navigation {
   position: fixed;
-  top: 112px;
+  visibility: hidden;
+  overflow: hidden;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  padding: 0;
+  margin: 0;
   background-color: #FFF5E9;
+  opacity: 0;
+  transition: opacity 500ms ease 0s, visibility 0s linear 500ms;
+}
+#new-navigation #burger-navigation.active {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+#new-navigation #burger-navigation .burger-elements {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  padding: 2% 0;
+  padding: 5% 0 0 0;
+  margin: 0;
+  height: 100vh;
 }
-#new-navigation #burger-navigation .logo-burger {
+#new-navigation #burger-navigation .burger-elements .logo-burger {
   max-width: 154px;
 }
-#new-navigation #burger-navigation .burger-links {
+#new-navigation #burger-navigation .burger-elements .burger-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
-#new-navigation #burger-navigation .burger-links li {
+#new-navigation #burger-navigation .burger-elements .burger-links li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   font-size: 4rem;
   line-height: 12rem;
 }
-#new-navigation #burger-navigation .burger-links li a:hover {
+#new-navigation #burger-navigation .burger-elements .burger-links li a {
+  text-decoration: none;
+  transition: text-shadow 450ms ease;
+}
+#new-navigation #burger-navigation .burger-elements .burger-links li a:hover {
   color: #000000;
-  text-shadow: 0px 0px 14px rgba(255, 92, 0, 0.6);
+  text-shadow: 0px 0px 14px rgba(255, 92, 0, 0.8);
 }
 
 /*///////////////////////////////////////////////////////////////////////////////*/

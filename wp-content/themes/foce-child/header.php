@@ -26,18 +26,23 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
 
 	<header id="masthead" class="site-header sectionAnimation">
-        <nav id="new-navigation" class="main-navigation">
-            <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-            <button class="burger-menu">X</button>
+        <nav id="new-navigation">
+            <div class="navbar main-navigation">
+                <h3 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
+                <button class="burger-icons"></button>
+            </div>
+            
             <div id="burger-navigation">
-                <img class="logo-burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
-                <ul class="burger-links">
-                    <li><a href="#story">Histoire</a></li>
-                    <li><a href="#characters">Personnages</a></li>
-                    <li><a href="#place">Lieu</a></li>
-                    <li><a href="#studio">Studio Koukaki</a></li>
-                </ul>
-                <p>STUDIO KOUKAKI</p>
+                <div class="burger-elements">
+                    <img class="logo-burger" src="<?php echo get_stylesheet_directory_uri() . '/assets/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+                    <ul class="burger-links">
+                        <li><a href="#story">Histoire</a></li>
+                        <li><a href="#characters">Personnages</a></li>
+                        <li><a href="#place">Lieu</a></li>
+                        <li><a href="#studio">Studio Koukaki</a></li>
+                    </ul>
+                    <p>STUDIO KOUKAKI</p>
+                </div>
             </div>
         </nav>
 		<!--<nav id="site-navigation" class="main-navigation">
