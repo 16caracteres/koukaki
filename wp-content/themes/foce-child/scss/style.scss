@@ -4,6 +4,28 @@ html {
     scrollbar-gutter: stable;
 }
 
+body.page {
+    max-width: none;
+    @media (max-width:700px) {
+        overflow-x :hidden;
+    }
+}
+
+main {
+    max-width: 1440px;
+    margin: auto;
+}
+
+footer {
+    max-width: 1440px;
+    margin: auto;
+    ul {
+        @media (max-width:555px) {
+            flex-direction: column;
+        }
+    }
+}
+
 // Ajout Fade-in des sections au scroll ///////////////////////////
 .sectionAnimation {
     opacity: 0;
@@ -51,6 +73,12 @@ html {
     }
 }
 
+#studio .titreAnimation {
+    @media (max-width:700px) {
+        font-size: 35px;
+    }
+}
+
 #titreStudio {
     overflow: inherit !important;
 }
@@ -82,12 +110,12 @@ html {
             background-image: url("assets/orange_cloud.png");
             background-size: contain;
             @media (max-width:996px) {
-                width:auto;
-                height: auto;
+                width:381px;
+                height: 141px;
                 font-size : 1.25rem;
                 line-height: 1.25rem;
                 background-size: cover;
-                padding: 55px;
+                padding: 44px;
             }
         }
         .nomination__logo {
@@ -97,7 +125,7 @@ html {
         }
     }
     &::after {
-        bottom: 35em;
+        bottom: 38em;
         right: 2em;
     }
 }
@@ -182,6 +210,9 @@ html {
         }
         .containerCharacters {
             max-width: 1440px;
+            @media (max-width:996px) {
+                width : 100%;               
+            }
             .picturesCharacters {
                 display: flex;
                 flex-direction: row;

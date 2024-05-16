@@ -11,6 +11,30 @@ html {
   scrollbar-gutter: stable;
 }
 
+body.page {
+  max-width: none;
+}
+@media (max-width: 700px) {
+  body.page {
+    overflow-x: hidden;
+  }
+}
+
+main {
+  max-width: 1440px;
+  margin: auto;
+}
+
+footer {
+  max-width: 1440px;
+  margin: auto;
+}
+@media (max-width: 555px) {
+  footer ul {
+    flex-direction: column;
+  }
+}
+
 .sectionAnimation {
   opacity: 0;
 }
@@ -50,6 +74,12 @@ html {
     opacity: 1;
   }
 }
+@media (max-width: 700px) {
+  #studio .titreAnimation {
+    font-size: 35px;
+  }
+}
+
 #titreStudio {
   overflow: inherit !important;
 }
@@ -86,12 +116,12 @@ html {
 }
 @media (max-width: 996px) {
   .site-footer #nomination h3 {
-    width: auto;
-    height: auto;
+    width: 381px;
+    height: 141px;
     font-size: 1.25rem;
     line-height: 1.25rem;
     background-size: cover;
-    padding: 55px;
+    padding: 44px;
   }
 }
 .site-footer #nomination .nomination__logo {
@@ -100,7 +130,7 @@ html {
   margin-top: 2em;
 }
 .site-footer::after {
-  bottom: 35em;
+  bottom: 38em;
   right: 2em;
 }
 
@@ -174,6 +204,11 @@ html {
 .story #characters .containerCharacters {
   max-width: 1440px;
 }
+@media (max-width: 996px) {
+  .story #characters .containerCharacters {
+    width: 100%;
+  }
+}
 .story #characters .containerCharacters .picturesCharacters {
   display: flex;
   flex-direction: row;
@@ -211,8 +246,18 @@ html {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 555px) {
+  #new-navigation .navbar {
+    justify-content: space-between;
+  }
+}
 #new-navigation .navbar .site-title a:hover {
   color: #000000;
+}
+@media (max-width: 996px) {
+  #new-navigation .navbar .site-title {
+    font-size: calc(0.875rem + 1vw);
+  }
 }
 #new-navigation .navbar .burger-icons {
   position: absolute;
@@ -283,6 +328,17 @@ html {
   width: 100px;
   height: 99px;
 }
+@media (max-width: 996px) {
+  #new-navigation #burger-navigation .burger-elements .flower-menu {
+    animation: none;
+    opacity: 0.6;
+  }
+}
+@media (max-width: 555px) {
+  #new-navigation #burger-navigation .burger-elements .flower-menu {
+    display: none;
+  }
+}
 #new-navigation #burger-navigation .burger-elements .cat-menu {
   position: absolute;
   animation: flottement 1.5s ease-in-out infinite;
@@ -298,6 +354,17 @@ html {
 #new-navigation #burger-navigation .burger-elements .cat-menu:nth-child(10) {
   left: 7%;
   bottom: 9%;
+}
+@media (max-width: 996px) {
+  #new-navigation #burger-navigation .burger-elements .cat-menu {
+    animation: none;
+    opacity: 0.4;
+  }
+}
+@media (max-width: 555px) {
+  #new-navigation #burger-navigation .burger-elements .cat-menu {
+    display: none;
+  }
 }
 #new-navigation #burger-navigation .burger-elements .burger-links {
   display: flex;
@@ -365,6 +432,18 @@ html {
   .titreAnimation--scroll,
   .sectionAnimation--fadeIn {
     animation: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 996px) {
+  .story__article::after,
+  .story h2::after,
+  .studio h2::after,
+  .site-footer::after,
+  .studio h2::before,
+  .site-footer::before {
+    display: none;
   }
 }
 

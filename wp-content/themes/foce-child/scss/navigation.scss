@@ -7,9 +7,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (max-width:555px) {
+            justify-content: space-between ;
+        }
         .site-title {
             a:hover {
             color:#000000;
+            }
+            @media (max-width:996px) {
+                font-size: calc(0.875rem + 1vw);
             }
         }
         .burger-icons {
@@ -82,6 +88,13 @@
                     width: 100px;
                     height: 99px;
                 }
+                @media (max-width:996px) {
+                    animation : none;
+                    opacity: 0.6;
+                }
+                @media (max-width:555px) {
+                    display: none;
+                }
             }
 
             .cat-menu {
@@ -98,6 +111,13 @@
                 &:nth-child(10) {
                     left : 7%;
                     bottom: 9%;
+                }
+                @media (max-width:996px) {
+                    animation : none;
+                    opacity: 0.4;
+                }
+                @media (max-width:555px) {
+                    display: none;
                 }
             }
 

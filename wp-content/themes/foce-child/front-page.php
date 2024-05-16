@@ -4,7 +4,7 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-        <section class="banner sectionAnimation" data-0="transform:translateY(0px)" data-300="transform:translateY(-50px)">
+        <section class="banner sectionAnimation" data-0="transform:translateY(0px)" data-300="transform:translateY(-150px)">
             <video id="bannerVideo" autoplay loop muted>
                 <source src="<?php echo get_stylesheet_directory_uri() . '/assets/Studio+Koukaki-vidéo+header+sans+son+(1).mp4'; ?> " type="video/mp4">
             </video>
