@@ -7,6 +7,10 @@
   }
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 .sectionAnimation {
   opacity: 0;
 }
@@ -30,7 +34,7 @@
 }
 
 .titreAnimation--scroll {
-  animation: titreScroll 800ms ease-in forwards;
+  animation: titreScroll 800ms ease-in-out forwards;
 }
 .titreAnimation:nth-child(2) {
   animation-delay: 300ms;
@@ -234,7 +238,8 @@
   bottom: 0;
   padding: 0;
   margin: 0;
-  background-color: #FFF5E9;
+  background: #FFF5E9 url("assets/flowers/hibiscus_footer.png") no-repeat;
+  background-position: right -320px bottom -320px;
   opacity: 0;
   transition: opacity 500ms ease 0s, visibility 0s linear 500ms;
 }
@@ -244,17 +249,55 @@
   transition-delay: 0s;
 }
 #new-navigation #burger-navigation .burger-elements {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 5% 0 0 0;
+  padding: 3% 0 0 0;
   margin: 0;
   height: 100vh;
 }
 #new-navigation #burger-navigation .burger-elements .logo-burger {
-  max-width: 154px;
+  max-width: 254px;
+}
+#new-navigation #burger-navigation .burger-elements .flower-menu {
+  position: absolute;
+  animation: fleursQuiTournent 20s linear both infinite;
+  transform-origin: center;
+}
+#new-navigation #burger-navigation .burger-elements .flower-menu:nth-child(1) {
+  left: -3%;
+  top: 11%;
+}
+#new-navigation #burger-navigation .burger-elements .flower-menu:nth-child(2) {
+  right: 24%;
+  top: 17%;
+}
+#new-navigation #burger-navigation .burger-elements .flower-menu:nth-child(3) {
+  left: 20%;
+  bottom: 36%;
+}
+#new-navigation #burger-navigation .burger-elements .flower-menu:nth-child(4) {
+  right: -2.5%;
+  bottom: 44%;
+  width: 100px;
+  height: 99px;
+}
+#new-navigation #burger-navigation .burger-elements .cat-menu {
+  position: absolute;
+  animation: flottement 1.5s ease-in-out infinite;
+}
+#new-navigation #burger-navigation .burger-elements .cat-menu:nth-child(8) {
+  left: 29%;
+  top: 24%;
+}
+#new-navigation #burger-navigation .burger-elements .cat-menu:nth-child(9) {
+  right: 22%;
+  bottom: 34%;
+}
+#new-navigation #burger-navigation .burger-elements .cat-menu:nth-child(10) {
+  left: 7%;
+  bottom: 9%;
 }
 #new-navigation #burger-navigation .burger-elements .burger-links {
   display: flex;
@@ -268,8 +311,25 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 4rem;
-  line-height: 12rem;
+  font-size: calc(1.5rem + 2.5vw);
+  line-height: calc(1.5rem + 7vw);
+  opacity: 0;
+  transform: translateY(40px);
+}
+#new-navigation #burger-navigation .burger-elements .burger-links li.menu-clic {
+  animation: titreMenu 500ms ease-in-out forwards;
+}
+#new-navigation #burger-navigation .burger-elements .burger-links li.menu-clic:nth-child(1) {
+  animation-delay: 100ms;
+}
+#new-navigation #burger-navigation .burger-elements .burger-links li.menu-clic:nth-child(2) {
+  animation-delay: 200ms;
+}
+#new-navigation #burger-navigation .burger-elements .burger-links li.menu-clic:nth-child(3) {
+  animation-delay: 300ms;
+}
+#new-navigation #burger-navigation .burger-elements .burger-links li.menu-clic:nth-child(4) {
+  animation-delay: 400ms;
 }
 #new-navigation #burger-navigation .burger-elements .burger-links li a {
   text-decoration: none;
@@ -280,7 +340,20 @@
   text-shadow: 0px 0px 14px rgba(255, 92, 0, 0.8);
 }
 
-/*///////////////////////////////////////////////////////////////////////////////*/
+@keyframes titreMenu {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.no-scroll {
+  overflow: hidden;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .banner .logoContainer img,
   .studio h2::before,

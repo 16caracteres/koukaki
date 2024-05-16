@@ -1,0 +1,165 @@
+#new-navigation {
+    width: 100%;
+    .navbar {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .site-title {
+            a:hover {
+            color:#000000;
+            }
+        }
+        .burger-icons {
+            position: absolute;
+            cursor: pointer;
+            right: 6%;
+            height: 30px;
+            width: 30px;
+            background-image: url("assets/burger-icon.png") ;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            &.active {
+                background-image: url("assets/cross-icon.png") ;
+            }
+        }
+    }
+    
+    #burger-navigation {
+        position: fixed;
+        visibility: hidden;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        background: #FFF5E9 url("assets/flowers/hibiscus_footer.png") no-repeat;
+        background-position: right -320px bottom -320px;
+        opacity: 0; 
+        transition: opacity 500ms ease 0s, visibility 0s linear 500ms; 
+        &.active {
+            visibility: visible; 
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        .burger-elements {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 3% 0 0 0 ;
+            margin: 0;
+            height: 100vh;
+
+            .logo-burger{
+                max-width: 254px;
+            }
+
+            .flower-menu {
+                position: absolute;
+                @include animationFleurs();
+                &:nth-child(1) {
+                    left : -3%;
+                    top: 11%;
+                }
+                &:nth-child(2) {
+                    right : 24%;
+                    top: 17%;
+                }
+                &:nth-child(3) {
+                    left : 20%;
+                    bottom: 36%;
+                }
+                &:nth-child(4) {
+                    right : -2.5%;
+                    bottom: 44%;
+                    width: 100px;
+                    height: 99px;
+                }
+            }
+
+            .cat-menu {
+                position: absolute;
+                animation : flottement 1.5s ease-in-out infinite;
+                &:nth-child(8) {
+                    left : 29%;
+                    top: 24%;
+                }
+                &:nth-child(9) {
+                    right : 22%;
+                    bottom: 34%;
+                }
+                &:nth-child(10) {
+                    left : 7%;
+                    bottom: 9%;
+                }
+            }
+
+            .burger-links {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                li {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    font-size: calc(1.5rem + 2.5vw);
+                    line-height: calc(1.5rem + 7vw);
+                    opacity: 0;
+                    transform: translateY(40px);
+                    &.menu-clic {
+                        animation: titreMenu 500ms ease-in-out forwards;
+                        &:nth-child(1) {
+                            animation-delay: 100ms;
+                        }
+                        &:nth-child(2) {
+                            animation-delay: 200ms;
+                        }
+                        &:nth-child(3) {
+                            animation-delay: 300ms;
+                        }
+                        &:nth-child(4) {
+                            animation-delay: 400ms;
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        transition: text-shadow 450ms ease;
+                        &:hover {
+                            color: #000000;
+                            text-shadow: 0px 0px 14px rgba(255,92,0,0.8);
+                        }
+
+                    }
+                    
+                }
+                
+            }
+
+        }
+    }
+}
+
+@keyframes titreMenu {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}

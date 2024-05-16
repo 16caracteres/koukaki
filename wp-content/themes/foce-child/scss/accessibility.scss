@@ -1,0 +1,13 @@
+@media (prefers-reduced-motion: reduce) {
+    .banner .logoContainer img,
+    .studio h2::before,
+    .site-footer::before,
+    .story__article::after,
+    .story h2::after,
+    .studio h2::after,
+    .site-footer::after,
+    .titreAnimation--scroll,
+    .sectionAnimation--fadeIn {
+      animation: none;
+    }
+  }
