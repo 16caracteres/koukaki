@@ -1,9 +1,9 @@
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 60,
     speed: 1750,
-    /*autoplay: {
+    autoplay: {
       delay: 400,
-    },*/
+    },
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -15,5 +15,3 @@ var swiper = new Swiper(".mySwiper", {
       slideShadows: false,
     },
   });
-
-  console.log("c'est swiper !");

@@ -235,6 +235,16 @@ footer {
   right: 35%;
 }
 
+@media (max-width: 996px) {
+  .story__article::after,
+  .story h2::after,
+  .studio h2::after,
+  .site-footer::after,
+  .studio h2::before,
+  .site-footer::before {
+    display: none;
+  }
+}
 #new-navigation {
   width: 100%;
 }
@@ -434,16 +444,6 @@ footer {
     animation: none;
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@media (max-width: 996px) {
-  .story__article::after,
-  .story h2::after,
-  .studio h2::after,
-  .site-footer::after,
-  .studio h2::before,
-  .site-footer::before {
-    display: none;
   }
 }
 

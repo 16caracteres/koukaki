@@ -1,10 +1,6 @@
-console.log("le menu lé là!");
-
 const burgerIcons = document.querySelector(".burger-icons");
 const burgerNavigation = document.getElementById("burger-navigation");
 const burgerLinks = document.querySelectorAll(".burger-links li");
-
-console.log(burgerLinks);
 
 burgerIcons.addEventListener("click", () => {
     burgerNavigation.classList.toggle("active");

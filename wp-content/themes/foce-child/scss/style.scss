@@ -173,7 +173,6 @@ footer {
         position: absolute;
         max-width: 100%;
         img {
-            //position: absolute;
             width: auto;
             animation : flottement 1.5s ease-in-out infinite;     
         }
@@ -242,6 +241,18 @@ footer {
         right:35%;
     }
 }
+
+// Autres media-queries
+@media (max-width:996px) {
+    .story__article::after,
+    .story h2::after,
+    .studio h2::after,
+    .site-footer::after,
+    .studio h2::before,
+    .site-footer::before {
+      display: none;
+    }
+  }
 
 // Ajout de la navigation fullscreen
 @import "navigation.scss";
